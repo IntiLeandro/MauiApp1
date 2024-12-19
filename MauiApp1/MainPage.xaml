@@ -1,0 +1,57 @@
+﻿<!--<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp1"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.Maui.Controls"
+             x:Class="MauiApp1.MainPage">
+
+    <Grid>
+        --><!-- Lector de código QR --><!--
+        <zxing:CameraBarcodeReaderView x:Name="BarcodeReaderView"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand"
+                                       BarcodesDetected="OnBarcodesDetected" />
+        --><!-- Indicador de validación --><!--
+        <StackLayout VerticalOptions="End" Padding="10">
+            <Label x:Name="StatusLabel" Text="Esperando escaneo..." HorizontalTextAlignment="Center" />
+        </StackLayout>
+    </Grid>
+</ContentPage>-->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:MauiApp1"
+ xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.Maui.Controls"
+             x:Class="MauiApp1.MainPage"
+             Title="Registro de Asistencia">
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="30"
+        VerticalOptions="Center">
+
+        <Label 
+            Text="Control de Asistencia"
+            FontSize="24"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <Button 
+            Text="Marcar Entrada"
+            ImageSource="entrada_icon.png"
+            BackgroundColor="Green"
+            TextColor="White"
+            FontSize="18"
+            CornerRadius="10"
+            HeightRequest="50"
+            Clicked="OnEntradaClicked" />
+
+        <Button 
+            Text="Marcar Salida"
+            ImageSource="salida_icon.png"
+            BackgroundColor="Red"
+            TextColor="White"
+            FontSize="18"
+            CornerRadius="10"
+            HeightRequest="50"
+            Clicked="OnSalidaClicked" />
+
+    </VerticalStackLayout>
+</ContentPage>
